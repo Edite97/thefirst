@@ -1,0 +1,184 @@
+@font-face {
+    font-family: "Modern Age";
+    src: url(../assets/fonts/Modern\ Age.ttf);
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f1ece8;
+}
+
+#contenedor {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px auto auto  auto auto 200px;
+    grid-template-areas:
+     "header"
+     "presentación"
+     "imagen"
+     "unicef"
+     "descripcion"
+     "footer";
+}
+header {
+   grid-area: header;
+   background-color: #2a343d;
+   display: grid;
+   grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "logo logo"
+    "nav1 nav2";
+    justify-items: center;
+    align-items: center;
+}
+header img {
+    width: 100px;
+    grid-area: logo;
+    padding: 10px;
+   }
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+a {
+    text-decoration: none;
+    color: rgb(234, 178, 11);
+    font-family: roboto;
+}
+article {
+    grid-area: presentación;
+    padding: 20px;
+    
+}
+  
+aside {
+    grid-area: imagen;
+}
+
+aside img {
+    width: 100%;
+}
+
+#unicef {
+    grid-area: unicef;
+      text-align: center;
+  }
+  
+section {
+    grid-area: descripcion;
+    padding: 20px;
+}
+section img {
+    width: 100%;
+    padding: 20px;
+}
+
+#formulario {
+    text-align: center;
+}
+#tituloFormulario {
+    text-decoration:underline;
+}
+    
+footer {
+    background-color: #2a343d;
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer img {
+    width: 100px;
+}
+footer h5{
+    color: rgb(234, 178, 11);
+    font-size: 15px;
+    font-family: roboto;
+    
+}
+ 
+@media (min-width : 770px) {
+    #contenedor {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 200px auto auto auto 200px;
+        grid-template-areas:
+        "header header"
+        "presentación imagen"
+        "unicef unicef"
+        "descripcion descripcion"
+        "footer footer";
+}
+header {
+    display: flex;
+}
+header img {
+    width: 100px;
+    grid-area: logo;
+    padding: 5px;
+    margin: 20px;
+}
+footer {
+    flex-direction: row;
+}
+aside {
+    margin-top: 20px;
+}
+.titulo {
+    text-align: center;
+}
+}
+
+
+@media (min-width : 1027px) {
+    #contenedor {
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 200px auto auto auto 200px;
+        grid-template-areas:
+        "header header header header"
+        "presentación presentación imagen imagen"
+        "unicef unicef unicef unicef"
+        "descripcion descripcion descripcion descripcion"
+        "footer footer footer footer";
+}
+header {
+    display: grid;
+grid-template-columns: 25% 25% 25% 25%;
+grid-template-rows: 1fr;
+grid-template-areas:
+"logo logo nav1 nav2";
+
+}
+
+header img {
+width: 150px;
+}
+
+a{
+padding: 15px;
+}
+a:hover {
+background-color: white;
+border: 1px solid orangered;
+border-radius: 20px;
+}
+article {
+       padding: 200px;
+       text-align: center;
+}
+section {
+    display: flex;
+    flex-direction: row;
+}
+}
+
+
